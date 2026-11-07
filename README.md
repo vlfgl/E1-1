@@ -80,3 +80,23 @@ docker stop <컨테이너ID>  # 해당 컨테이너 종료
 
 **해결**: app 폴더 안에 index.html 파일 생성
 
+## Dockerfile 기반 웹 서버
+
+### 파일 구조
+
+
+### Dockerfile
+```dockerfile
+FROM nginx:alpine
+COPY app/ /usr/share/nginx/html/
+docker build -t my-web .
+docker run -d -p 8080:80 my-web
+```
+
+
+
+```powershell
+git add README.md
+git commit -m "docs: 체크리스트·검증방법·Dockerfile 섹션 완성"
+git push
+```
